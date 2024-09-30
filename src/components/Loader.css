@@ -1,0 +1,83 @@
+/* src/components/Loader.css */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Ensures that brackets are below the image */
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Adjust as needed */
+    z-index: 9999;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .loader-image {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    animation: imageAnimation 2s ease-in-out forwards;
+  }
+  
+  @keyframes imageAnimation {
+    0% {
+      transform: scale(0) translateY(-100vh);
+    }
+    50% {
+      transform: scale(1.5) translateY(0);
+    }
+    100% {
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  .brackets-loader {
+    display: flex;
+    position: relative;
+    margin-top: 20px; /* Adjust spacing between image and brackets as needed */
+    animation: bracketsAnimation 2s ease-in-out forwards;
+  }
+  
+  .bracket {
+    font-size: 40px;
+    font-weight: 600;
+    color: #91b3e0;
+    margin: 0 15px; /* Adjust spacing between brackets */
+  }
+  
+  .bracket.before {
+    animation: bracketAnimationBefore 1.5s infinite;
+  }
+  
+  .bracket.after {
+    animation: bracketAnimationAfter 1.5s infinite;
+  }
+  
+  @keyframes bracketsAnimation {
+    0% {
+      transform: scale(0) translateY(-100vh);
+    }
+    50% {
+      transform: scale(1.5) translateY(0);
+    }
+    100% {
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  @keyframes bracketAnimationBefore {
+    0% { transform: scale(1.5); color: #91b3e0; }
+    50% { transform: scale(3); color: #ffffff; }
+    100% { transform: scale(1.5); color: #91b3e0; }
+  }
+  
+  @keyframes bracketAnimationAfter {
+    0% { transform: scale(3); color: #91b3e0; }
+    50% { transform: scale(1.5); color: #ffffff; }
+    100% { transform: scale(3); color: #91b3e0; }
+  }
+  

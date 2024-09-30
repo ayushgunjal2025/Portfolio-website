@@ -1,0 +1,62 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Ensure only vertical scrolling is enabled */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+@keyframes slide-up {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+  
+.slide-up {
+    animation: slide-up 0.5s ease-out forwards;
+}
+
+/* Animation for rotating the image */
+@keyframes rotateZ {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+  
+.rotate-once {
+  animation: rotateZ 1s linear;
+}
+
+/* Animation for bouncing the image */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+  
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Card hover effect */
+.card {
+  background-color: black;
+  border: 1px solid white;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  background-color: #1F242D; /* Change to desired color on hover */
+  transform: scale(0.98); /* Slightly decrease width on hover */
+}

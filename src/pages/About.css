@@ -1,0 +1,64 @@
+/* About.css */
+
+/* Animation for image entrance */
+.image-enter {
+    transform: translateX(-100%);
+  }
+  .image-enter-active {
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+  }
+  .image-exit {
+    transform: translateX(0);
+  }
+  .image-exit-active {
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out;
+  }
+  
+  /* Animation for content entrance */
+  .content-enter {
+    transform: translateX(100%);
+  }
+  .content-enter-active {
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+  }
+  .content-exit {
+    transform: translateX(0);
+  }
+  .content-exit-active {
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+  }
+  
+  /* Animation for continuous up and down movement */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px); /* Increased bounce height */
+    }
+  }
+  
+  .animate-image img {
+    animation: bounce 2s infinite; /* 2s duration, infinite loop */
+  }
+  
+  /* Optional: Style adjustments for better appearance */
+  .bg-blue-500 {
+    background-color: #3b82f6; /* Blue color matching the button */
+  }
+  .text-white {
+    color: #ffffff; /* White text color */
+  }
+  .bg-gray-800 {
+    background-color: #1f2937; /* Dark gray background for the skills section */
+  }
+  .bg-gray-300 {
+    background-color: #d1d5db; /* Light gray background for progress bars */
+  }
+  .border-gray-300 {
+    border-color: #d1d5db; /* Light gray border for circular indicators */
+  }
